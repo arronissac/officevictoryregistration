@@ -1,0 +1,42 @@
+
+<section class="section-padding small-table-area">
+    <div class="container">
+      <div class="row">
+        <!-- Heading -->
+        <div class="col-md-12 text-center">
+          <h1 class="section-title aqua-heading">Victory Worship Centre</h1>
+          <p>Praise the Lord, my soul;  all my inmost being, praise his holy name.</p>
+        </div>
+       
+        <!-- Pricing Table Area -->
+        <div class="gg-pricing-table small-table col-md-12 mt-50">
+          <!-- Single Table -->
+          <div *ngFor="let item of seat">
+          <div class="col-md-4">
+            <div class="single-pricing-table text-center clearfix">
+              <!-- Price -->
+              <div class="price">
+                <span>{{item.count}}</span><h2> Seats Available</h2>
+               
+              </div>
+              <!-- Heading -->
+              <div class="pricing-table-heading">
+                <br>
+                <h4><u>{{item.time}}</u></h4>
+                <h5><br>{{item.des}}<br>{{item.rtime}}<br>{{item.phone}} </h5>
+              </div>
+              <!-- Button -->
+              <div class="pricing-button">
+                <a href="tel:{{item.phone}}" class="btn btn-pricing"> <i class="fa fa-phone" aria-hidden="true"></i> Call Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- Single Table -->
+         
+          <!-- Credits -->
+        
+        </div>
+      </div>
+    </div>
+  </section>

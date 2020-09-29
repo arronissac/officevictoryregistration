@@ -1,0 +1,47 @@
+<app-navigation></app-navigation>
+<h2 style="text-align: center;"><b><u>1st SERVICE REGISTRATION</u></b></h2>
+<br>
+<div class="card">
+    <div class="form-group">
+      <label for="email">Family Name:</label>
+      <input type="text" [(ngModel)]="objs.name" class="form-control" name="name" id="email" >
+    </div>
+    <div class="form-group">
+      <label for="pwd">Count</label>
+      <input type="number"  [(ngModel)]="objs.list" class="form-control" id="pwd">
+    </div>
+    <button type="submit" (click)="add_reg()" class="btn btn-default">Submit</button>
+  </div>
+    <br> 
+
+
+    <div id="table">
+    <h3><b><u>1st Service List</u></b></h3>
+  
+    <table class="table table-striped" >
+
+     
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">List</th>
+          <th>------</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody > 
+        <tr  *ngFor="let sea of customers; index as i; ">
+          
+          <th scope="row">{{i+1}}</th>
+          <td>{{sea.name}}</td>
+          <td>{{sea.list}}</td>
+          <th>------</th>
+          <td><span class="button is-small btn-danger" (click)='delete(sea.key,sea.list)'>Delete</span></td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+    <button class="btn" (click)="makepdf()"><i class="fa fa-download"></i> Download</button>
+ 
